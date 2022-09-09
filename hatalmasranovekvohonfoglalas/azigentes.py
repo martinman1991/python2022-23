@@ -1,0 +1,1 @@
+print("please send help I wanna kill myself so severely)
