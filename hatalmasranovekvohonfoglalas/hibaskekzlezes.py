@@ -10,9 +10,13 @@ else:
 finally:
     print("Alsó szöveg")
 
-try:
-    szam=int(input("Number pls: "))
-except:
-    pass
+szam=""
+while szam=="":
+    try:
+        szam=int(input("Number pls: "))
+    except ValueError:
+        print("Hallod tes számot kéne beirkálnod nem mást.")
+    except IndexError:
+        print("Tesomsz valamit rosszul csinálszs")
 
 print(szam)
