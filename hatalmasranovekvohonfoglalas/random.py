@@ -30,7 +30,7 @@ import math
 
 #print((random.randint(83,832)*2+1)*6)
 
-szavak=["alma","körte","barack","banán","dinnye","szőlő"]
+szavak=["alma","körte","barack","banón","dinnye","szőlő"]
 
 #random.seed(1)
 print(szavak[random.randint(0,len(szavak)-1)])
@@ -50,4 +50,4 @@ print(nagyLista)
 
 
 for e in nagyLista:
-    print(e[0].ljust(10),str(e[1]).rjust(4),"kg")
+    print(e[0].ljust(10),str(e[1]).rjust(4),"kg", "*"*(e[1]//7))
