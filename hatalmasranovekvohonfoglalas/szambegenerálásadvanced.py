@@ -16,3 +16,15 @@ egyseg=80//legnagyobb
 
 for e in lista:
     print("*"*(e*egyseg))
+
+#3 jegyű számbekérés
+
+szam=[]
+while len(szam) !=3:
+    szam=input("Kéekrkelk egy háoerm jegjű szaamt: ")
+
+szam=int(szam)
+
+if szam%12==0:
+    print("osz6ó")
+print(szam)
