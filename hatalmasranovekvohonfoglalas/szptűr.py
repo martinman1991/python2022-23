@@ -32,10 +32,25 @@ def beolvas():
     for sor in f:
         kerdesek.append(sor.replace("\n","").split(" "))
 
-    f.close()    
+    f.close()
 def kerdez():
-    print(kerdesek)
-    
+    random.seed(2)
+    valasztott=random.choice(kerdesek)
+    print("valasztott", valasztott)
+    rossz=[]
+    for i in range(3):
+        temp=random.choice(kerdesek)
+        print("temp",temp)
+        while temp not in rossz and temp!=valasztott:
+            rossz.append(temp)
+        print("rossz",rossz)
+
+    print("-"*40)
+    print("Mit jelenet ez a szó? "+ valasztott[0])
+
+    #rossz.append(valasztott)
+    print(rossz)
+
 beolvas()
 kerdez()
 #szavak=sokBeker()
