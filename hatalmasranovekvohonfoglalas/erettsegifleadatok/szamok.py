@@ -44,7 +44,35 @@ sorsolt=random.choice(ujLista)
 
 valasz=input(sorsolt[0])
 if int(valasz)==sorsolt[1]:
-   print(sorsolt[2]+"pont")
+   print(sorsolt[2]+" pont")
 else:
    print("0 pont")
-   print("a helyes válasz: " + str(sorsolt)[1])
+   print("a helyes válasz: "+ str(sorsolt)[1])
+
+print("7, fekadat")
+
+lista10=[]
+for i in range(10):
+   r=random.choice(kerdesek)
+   while r in lista10:
+      r.random.choice(kerdesek)
+
+   lista10.append(r)
+
+print(lista10)
+
+random.shuffle(kerdesek)
+lista10=kerdesek[0:10]
+
+print(len(lista10))
+
+f.open("tesztfel.txt","w")
+ossz=0
+
+for e in lista10:
+   f.write(str(e[2])+" "+str(e[1])" "+str(e[0])+"\n")
+   ossz+=e[2]
+
+f.write("A feladatsorra összesen {0} pont adható.".format(ossz))
+f.close()
+
