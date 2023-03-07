@@ -1,5 +1,6 @@
 def ado(adosav,alapterulet):
     ar=0
+    alapterulet=int(alapterulet)
     if adosav=="A":
         ar=int(arak[0]*alapterulet)
     elif adosav=="B":
@@ -37,4 +38,12 @@ else:
 
 hazakA=[e for e in hazak if e[3]=="A"]
 
-ado()
+hazakB=[]
+for e in hazak:
+    if e[3]=="B":
+        hazakB.append(e)
+
+hazakA=[e for e in hazak if e[3]=="C"]
+
+for i in range(len(hazakA)):
+    hazakA[i].append(ado(hazakA[i][3],hazakA[i][4]))
