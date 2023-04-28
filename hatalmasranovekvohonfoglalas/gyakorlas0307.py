@@ -1,3 +1,16 @@
+def oszlopVissza(hanyadik):
+    oszlop=[]
+    for e in tabla:
+        oszlop.append(e[hanyadik-1])
+    return oszlop
+
+def oszlopVissza2(hannyalOszthato):
+    return [e[hannyalOszthato-1::hannyalOszthato] for e in tabla]
+
+def t(hanyadik):
+    oszlop=[e[5::6] for e in tabla]
+    return oszlop
+
 gyumolcsok=["alma","szőló","körte","barac","dragonfruit","licsi"]
 print("Ennyi gyümölcs van: {0}".format(len(gyumolcsok)))
 #gyumolcsok[3]="barack"
@@ -58,3 +71,32 @@ forditott.reverse()
 print(", ".join(forditott))
 
 print(", ".join(forditott[::-1]))
+
+tabla=[]
+for i in range(20):
+    sor=[]
+    for k in range(10):
+        sor.append((i+1)*(k+1))
+    tabla.append(sor)
+
+print(tabla)
+
+oszlop=[]
+for e in tabla:
+    oszlop.append(e[0])
+
+print(oszlop)
+print(oszlopVissza(5))
+print(oszlopVissza(6))
+
+oszlop=[e[:3] for e in tabla]
+oszlop=[e[4:7] for e in tabla]
+oszlop=[e[1::2] for e in tabla]
+oszlop=[e[3::2] for e in tabla]
+print(oszlop)
+
+#print(oszlopVissza2(int(input("Szám: "))))
+
+oszlop=[[e[2], e[7]] for e in tabla]
+
+print(oszlop)
